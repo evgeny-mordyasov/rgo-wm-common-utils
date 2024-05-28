@@ -20,19 +20,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <!-- utils -->
-        <jsr305.version>3.0.2</jsr305.version>
+        <!-- rgo-wm-dependencies -->
+        <rgo-wm-dependencies.version>24.0.0-SNAPSHOT</rgo-wm-dependencies.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- utils -->
+            <!-- rgo-wm-dependencies -->
             <dependency>
-                <groupId>com.google.code.findbugs</groupId>
-                <artifactId>jsr305</artifactId>
-                <version>${jsr305.version}</version>
+                <groupId>ru.gold.ordance</groupId>
+                <artifactId>rgo-wm-dependencies</artifactId>
+                <version>${rgo-wm-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
-            <!-- /utils -->
+            <!-- /rgo-wm-dependencies -->
         </dependencies>
     </dependencyManagement>
 </project>
