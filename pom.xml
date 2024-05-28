@@ -10,11 +10,29 @@
 
     <packaging>pom</packaging>
 
+    <modules>
+        <module>rgo-wm-common-utils-asserts</module>
+    </modules>
+
     <properties>
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.source>17</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- utils -->
+        <jsr305.version>3.0.2</jsr305.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- utils -->
+            <dependency>
+                <groupId>com.google.code.findbugs</groupId>
+                <artifactId>jsr305</artifactId>
+                <version>${jsr305.version}</version>
+            </dependency>
+            <!-- /utils -->
+        </dependencies>
+    </dependencyManagement>
 </project>
