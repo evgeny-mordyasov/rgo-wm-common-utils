@@ -12,6 +12,7 @@
 
     <modules>
         <module>rgo-wm-common-utils-asserts</module>
+        <module>rgo-wm-common-utils-validator</module>
     </modules>
 
     <properties>
