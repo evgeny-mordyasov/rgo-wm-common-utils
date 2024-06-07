@@ -2,7 +2,7 @@ package rgo.wm.common.utils.asserts;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.Collection;
+import java.util.List;
 
 public final class Asserts {
 
@@ -10,24 +10,25 @@ public final class Asserts {
     }
 
     @Nonnull
-    public static <T> T nonNull(@Nullable T object, String message) {
+    public static <T> T nonNull(@Nullable T object, String paramName) {
         if (object == null) {
-            throw new AssertsException(message);
+            throw new AssertsException("'" + paramName + "' must not be null");
         }
         return object;
     }
 
-    public static int nonNegative(int value, String message) {
+    public static int nonNegative(int value, String paramName) {
         if (value < 0) {
-            throw new AssertsException(message);
+            throw new AssertsException("'" + paramName + "' must not be negative");
         }
         return value;
     }
 
-    public static <T> Collection<T> nonEmpty(Collection<T> collection, String message) {
-        if (collection.isEmpty()) {
-            throw new AssertsException(message);
+    @Nonnull
+    public static <T> List<T> nonEmpty(@Nullable List<T> list, String paramName) {
+        if (nonNull(list, paramName).isEmpty()) {
+            throw new AssertsException("'" + paramName + "' must not be empty");
         }
-        return collection;
+        return list;
     }
 }
