@@ -18,7 +18,7 @@ class TooManyRequestsHttpResponseTest {
     void getStatus() {
         List<ErrorDetail> errorDetails = ErrorDetail.ofAsList(randomString());
         response = new TooManyRequestsHttpResponse(errorDetails);
-        assertThat(response.getStatus()).isEqualTo(HttpResponse.TOO_MANY_REQUESTS_STATUS);
+        assertThat(response.status()).isEqualTo(HttpResponse.TOO_MANY_REQUESTS_STATUS);
     }
 
     @Test

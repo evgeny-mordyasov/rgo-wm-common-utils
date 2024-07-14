@@ -18,7 +18,7 @@ class NotFoundHttpResponseTest {
     void getStatus() {
         List<ErrorDetail> errorDetails = ErrorDetail.ofAsList(randomString());
         response = new NotFoundHttpResponse(errorDetails);
-        assertThat(response.getStatus()).isEqualTo(HttpResponse.NOT_FOUND_STATUS);
+        assertThat(response.status()).isEqualTo(HttpResponse.NOT_FOUND_STATUS);
     }
 
     @Test

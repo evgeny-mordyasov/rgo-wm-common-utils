@@ -12,7 +12,7 @@ public record TooManyRequestsHttpResponse(List<ErrorDetail> errorDetails) implem
     }
 
     @Override
-    public HttpStatus getStatus() {
+    public HttpStatus status() {
         return TOO_MANY_REQUESTS_STATUS;
     }
 }

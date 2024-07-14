@@ -18,7 +18,7 @@ class InvalidRqHttpResponseTest {
     void getStatus() {
         List<ErrorDetail> errorDetails = ErrorDetail.ofAsList(randomString());
         response = new InvalidRqHttpResponse(errorDetails);
-        assertThat(response.getStatus()).isEqualTo(HttpResponse.INVALID_RQ_STATUS);
+        assertThat(response.status()).isEqualTo(HttpResponse.INVALID_RQ_STATUS);
     }
 
     @Test

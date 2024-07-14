@@ -12,7 +12,7 @@ public record InvalidRqHttpResponse(List<ErrorDetail> errorDetails) implements H
     }
 
     @Override
-    public HttpStatus getStatus() {
+    public HttpStatus status() {
         return INVALID_RQ_STATUS;
     }
 }

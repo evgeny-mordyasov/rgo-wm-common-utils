@@ -12,7 +12,7 @@ public record FailureHttpResponse(List<ErrorDetail> errorDetails) implements Htt
     }
 
     @Override
-    public HttpStatus getStatus() {
+    public HttpStatus status() {
         return FAILURE_STATUS;
     }
 }

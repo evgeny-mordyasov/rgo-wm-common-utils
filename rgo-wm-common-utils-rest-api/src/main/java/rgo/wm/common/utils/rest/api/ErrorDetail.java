@@ -4,12 +4,16 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class ErrorDetail {
+public final class ErrorDetail {
 
     private final String message;
 
     private ErrorDetail(String message) {
         this.message = message;
+    }
+
+    ErrorDetail() {
+        message = null;
     }
 
     public static ErrorDetail of(String message) {

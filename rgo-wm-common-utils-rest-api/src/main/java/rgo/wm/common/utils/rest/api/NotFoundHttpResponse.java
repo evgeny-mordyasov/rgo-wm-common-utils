@@ -12,7 +12,7 @@ public record NotFoundHttpResponse(List<ErrorDetail> errorDetails) implements Ht
     }
 
     @Override
-    public HttpStatus getStatus() {
+    public HttpStatus status() {
         return NOT_FOUND_STATUS;
     }
 }

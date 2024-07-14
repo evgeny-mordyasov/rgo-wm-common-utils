@@ -18,7 +18,7 @@ class FailureHttpResponseTest {
     void getStatus() {
         List<ErrorDetail> errorDetails = ErrorDetail.ofAsList(randomString());
         response = new FailureHttpResponse(errorDetails);
-        assertThat(response.getStatus()).isEqualTo(HttpResponse.FAILURE_STATUS);
+        assertThat(response.status()).isEqualTo(HttpResponse.FAILURE_STATUS);
     }
 
     @Test

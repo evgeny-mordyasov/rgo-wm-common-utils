@@ -13,7 +13,7 @@ public interface HttpResponse {
     HttpStatus TOO_MANY_REQUESTS_STATUS = new TooManyRequestsHttpStatus();
     HttpStatus FAILURE_STATUS = new FailureHttpStatus();
 
-    HttpStatus getStatus();
+    HttpStatus status();
 
     static HttpResponse invalidRq(List<ErrorDetail> errorDetails) {
         return new InvalidRqHttpResponse(errorDetails);
