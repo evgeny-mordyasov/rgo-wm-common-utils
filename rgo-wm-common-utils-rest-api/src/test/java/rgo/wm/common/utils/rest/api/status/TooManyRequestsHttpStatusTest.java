@@ -16,6 +16,7 @@ class TooManyRequestsHttpStatusTest {
 
     @Test
     void getCode() {
-        assertThat(status.getCode()).hasToString("TOO_MANY_REQUESTS");
+        assertThat(status.code()).hasToString("TOO_MANY_REQUESTS");
+        assertThat(status.httpCode()).isEqualTo(429);
     }
 }

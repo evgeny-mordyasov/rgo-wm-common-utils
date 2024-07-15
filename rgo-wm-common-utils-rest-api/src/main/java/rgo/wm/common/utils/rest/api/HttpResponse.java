@@ -1,5 +1,6 @@
 package rgo.wm.common.utils.rest.api;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import rgo.wm.common.utils.rest.api.status.*;
 
 import java.util.List;
@@ -13,6 +14,7 @@ public interface HttpResponse {
     HttpStatus TOO_MANY_REQUESTS_STATUS = new TooManyRequestsHttpStatus();
     HttpStatus FAILURE_STATUS = new FailureHttpStatus();
 
+    @JsonProperty("status")
     HttpStatus status();
 
     static HttpResponse invalidRq(List<ErrorDetail> errorDetails) {

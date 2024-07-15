@@ -12,10 +12,6 @@ public final class ErrorDetail {
         this.message = message;
     }
 
-    ErrorDetail() {
-        message = null;
-    }
-
     public static ErrorDetail of(String message) {
         return new ErrorDetail(message);
     }

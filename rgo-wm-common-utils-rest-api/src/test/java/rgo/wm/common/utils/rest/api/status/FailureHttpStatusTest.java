@@ -16,6 +16,7 @@ class FailureHttpStatusTest {
 
     @Test
     void getCode() {
-        assertThat(status.getCode()).hasToString("FAILURE");
+        assertThat(status.code()).hasToString("FAILURE");
+        assertThat(status.httpCode()).isEqualTo(500);
     }
 }

@@ -16,6 +16,7 @@ class InvalidRqHttpStatusTest {
 
     @Test
     void getCode() {
-        assertThat(status.getCode()).hasToString("INVALID_RQ");
+        assertThat(status.code()).hasToString("INVALID_RQ");
+        assertThat(status.httpCode()).isEqualTo(400);
     }
 }

@@ -16,6 +16,7 @@ class NotFoundHttpStatusTest {
 
     @Test
     void getCode() {
-        assertThat(status.getCode()).hasToString("NOT_FOUND");
+        assertThat(status.code()).hasToString("NOT_FOUND");
+        assertThat(status.httpCode()).isEqualTo(404);
     }
 }

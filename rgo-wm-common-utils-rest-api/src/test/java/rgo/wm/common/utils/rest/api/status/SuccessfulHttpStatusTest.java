@@ -16,6 +16,7 @@ class SuccessfulHttpStatusTest {
 
     @Test
     void getCode() {
-        assertThat(status.getCode()).hasToString("SUCCESS");
+        assertThat(status.code()).hasToString("SUCCESS");
+        assertThat(status.httpCode()).isEqualTo(200);
     }
 }

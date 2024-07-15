@@ -16,6 +16,7 @@ class CreatedHttpStatusTest {
 
     @Test
     void getCode() {
-        assertThat(status.getCode()).hasToString("CREATED");
+        assertThat(status.code()).hasToString("CREATED");
+        assertThat(status.httpCode()).isEqualTo(201);
     }
 }
