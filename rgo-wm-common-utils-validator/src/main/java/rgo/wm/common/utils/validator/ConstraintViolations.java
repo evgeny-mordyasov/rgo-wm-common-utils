@@ -5,7 +5,7 @@ import jakarta.validation.ConstraintViolation;
 import java.util.List;
 import java.util.Set;
 
-public final class ConstraintViolations {
+final class ConstraintViolations {
 
     private ConstraintViolations() {
     }
