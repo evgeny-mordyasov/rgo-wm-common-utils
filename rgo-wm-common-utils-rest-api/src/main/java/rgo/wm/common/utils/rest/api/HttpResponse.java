@@ -21,12 +21,12 @@ public interface HttpResponse {
         return new InvalidRqHttpResponse(errorDetails);
     }
 
-    static HttpResponse notFound(List<ErrorDetail> errorDetails) {
-        return new NotFoundHttpResponse(errorDetails);
+    static HttpResponse notFound() {
+        return new NotFoundHttpResponse();
     }
 
-    static HttpResponse tooManyRequests(List<ErrorDetail> errorDetails) {
-        return new TooManyRequestsHttpResponse(errorDetails);
+    static HttpResponse tooManyRequests() {
+        return new TooManyRequestsHttpResponse();
     }
 
     static HttpResponse failure(List<ErrorDetail> errorDetails) {
