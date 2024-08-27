@@ -1,7 +1,13 @@
 package rgo.wm.common.utils.rest.api;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import rgo.wm.common.utils.rest.api.status.*;
+import rgo.wm.common.utils.rest.api.status.CreatedHttpStatus;
+import rgo.wm.common.utils.rest.api.status.FailureHttpStatus;
+import rgo.wm.common.utils.rest.api.status.HttpStatus;
+import rgo.wm.common.utils.rest.api.status.InvalidRqHttpStatus;
+import rgo.wm.common.utils.rest.api.status.NotFoundHttpStatus;
+import rgo.wm.common.utils.rest.api.status.SuccessfulHttpStatus;
+import rgo.wm.common.utils.rest.api.status.TooManyRequestsHttpStatus;
 
 import java.util.List;
 
