@@ -15,6 +15,7 @@
         <module>rgo-wm-common-utils-validator</module>
         <module>rgo-wm-common-utils-rest-api</module>
         <module>rgo-wm-common-utils-exceptions</module>
+        <module>rgo-wm-common-utils-validator-rest</module>
     </modules>
 
     <properties>
@@ -29,6 +30,19 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- self-modules -->
+            <dependency>
+                <groupId>ru.gold.ordance</groupId>
+                <artifactId>rgo-wm-common-utils-rest-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ru.gold.ordance</groupId>
+                <artifactId>rgo-wm-common-utils-validator</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- /self-modules -->
+
             <!-- rgo-wm-dependencies -->
             <dependency>
                 <groupId>ru.gold.ordance</groupId>
