@@ -1,7 +1,7 @@
 package rgo.wm.common.utils.asserts;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.util.List;
 
 public final class Asserts {

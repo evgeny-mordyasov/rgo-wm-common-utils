@@ -1,5 +1,6 @@
 package rgo.wm.common.utils.validator;
 
+import jakarta.annotation.Nonnull;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validator;
 
@@ -14,7 +15,7 @@ public class ValidatorAdapter {
         this.validator = validator;
     }
 
-    public <T> List<String> validate(T t) {
+    public <T> List<String> validate(@Nonnull T t) {
         Set<ConstraintViolation<T>> violations = validator.validate(t);
         return ConstraintViolations.messages(violations);
     }

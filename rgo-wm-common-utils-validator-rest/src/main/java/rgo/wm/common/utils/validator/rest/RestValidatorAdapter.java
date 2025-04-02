@@ -1,5 +1,6 @@
 package rgo.wm.common.utils.validator.rest;
 
+import jakarta.annotation.Nonnull;
 import rgo.wm.common.utils.rest.api.ErrorDetail;
 import rgo.wm.common.utils.rest.api.HttpResponse;
 import rgo.wm.common.utils.validator.ValidatorAdapter;
@@ -15,7 +16,8 @@ public class RestValidatorAdapter {
         this.validator = validator;
     }
 
-    public <T> HttpResponse validate(T rq, Supplier<HttpResponse> supplier) {
+    @Nonnull
+    public <T> HttpResponse validate(@Nonnull T rq, @Nonnull Supplier<HttpResponse> supplier) {
         List<String> errorMessages = validator.validate(rq);
         if (errorMessages.isEmpty()) {
             return supplier.get();
