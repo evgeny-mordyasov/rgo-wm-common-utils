@@ -16,6 +16,7 @@
         <module>rgo-wm-common-utils-rest-api</module>
         <module>rgo-wm-common-utils-exceptions</module>
         <module>rgo-wm-common-utils-validator-rest</module>
+        <module>rgo-wm-common-utils-bom</module>
     </modules>
 
     <properties>
@@ -24,13 +25,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <!-- rgo-wm-dependencies -->
-        <rgo-wm-dependencies.version>24.0.0-SNAPSHOT</rgo-wm-dependencies.version>
+        <common-dependencies-bom.version>24.0.0-SNAPSHOT</common-dependencies-bom.version>
+        <rgo-wm-common-test-utils.version>24.0.0-SNAPSHOT</rgo-wm-common-test-utils.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <!-- self-modules -->
+            <dependency>
+                <groupId>ru.gold.ordance</groupId>
+                <artifactId>rgo-wm-common-utils-asserts</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>ru.gold.ordance</groupId>
                 <artifactId>rgo-wm-common-utils-rest-api</artifactId>
@@ -43,15 +49,20 @@
             </dependency>
             <!-- /self-modules -->
 
-            <!-- rgo-wm-dependencies -->
+            <!-- rgo-wm modules -->
             <dependency>
                 <groupId>ru.gold.ordance</groupId>
-                <artifactId>rgo-wm-dependencies</artifactId>
-                <version>${rgo-wm-dependencies.version}</version>
+                <artifactId>common-dependencies-bom</artifactId>
+                <version>${common-dependencies-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- /rgo-wm-dependencies -->
+            <dependency>
+                <groupId>ru.gold.ordance</groupId>
+                <artifactId>rgo-wm-common-test-utils-random</artifactId>
+                <version>${rgo-wm-common-test-utils.version}</version>
+            </dependency>
+            <!-- /rgo-wm modules -->
         </dependencies>
     </dependencyManagement>
 
